@@ -1,0 +1,16 @@
+[project]
+name = "backup-mcp"
+version = "0.1.0"
+description = "MCP server to snapshot, diff, verify and safely restore local directories"
+requires-python = ">=3.10"
+dependencies = ["mcp>=2.3,<3", "pydantic>=2"]
+
+[project.scripts]
+backup-mcp = "backup_mcp.server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
